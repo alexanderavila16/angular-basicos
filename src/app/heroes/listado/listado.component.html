@@ -1,0 +1,40 @@
+<p>listado de heroes</p>
+
+<!-- *ngIf="false" no me muestra la informacion y true si la muestra
+heroeborrado es diferente a un string vacio 
+si esta condicion heroeborrado no se cumple entonces mustre este template noborrado-->
+<div *ngIf="heroeborrado; else noborrado">
+<h3>heroe borrado: <small>{{heroeborrado}}</small></h3>
+
+</div>
+
+<!-- seria un else esto, elng-template va mostrar este contenido
+basado en la condiicion noborrado de arriba
+la referencia local se coloca con simbolo numeral -->
+<ng-template #noborrado>
+    <h3>no ha borrado nada</h3>
+    
+</ng-template>
+
+
+    <button (click)="borrarheroe()">
+        borrar
+    </button>
+
+    <ul>
+        <!-- la directiva ngfor  -->
+        <li *ngFor="let heroe of heroes; let i = index">
+           {{i +1}} - {{heroe}} 
+        </li>
+    </ul>
+
+
+
+
+    <!-- <li>{{heroes[0]}}</li>
+    <li>{{heroes[1]}}</li>
+    <li>{{heroes[2]}}</li>
+    <li>{{heroes[3]}}</li> -->
+
+
+

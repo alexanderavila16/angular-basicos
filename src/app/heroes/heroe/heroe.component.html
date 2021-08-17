@@ -1,0 +1,27 @@
+<h1>{{nombre}}</h1>
+
+<!-- etiqueta descripcion list  -->
+<dl>
+
+    <td>Nombre: </td>
+    <dd>{{nombre}}</dd>
+
+    <td>Edad: </td>
+    <dd>{{edad}}</dd>
+
+    <td>Funcion: </td>
+    <dd>{{ obtenernombre() }}</dd>
+
+    
+    <td>Capitalizado</td>
+    <dd>{{nombrecapitalizado}}</dd>
+
+</dl>
+<!-- cambiamos con mi metodo el nombre  -->
+<button (click)="cambiarnombre()">
+    Cambiar heroe 
+</button>
+
+<button (click)="cambiaredad()">
+    Cambiar edad 
+</button>
